@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "flutter": "flutterance alexa/flutterances.txt alexa/utterances.txt",
-    "initDb": "sequelize db:migrate --config src/config/config.json && sequelize db:seed:all --config src/config/config.json"
+    "initDb": "sequelize db:migrate && sequelize db:seed:all"
   },
   "repository": {
     "type": "git",
