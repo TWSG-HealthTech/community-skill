@@ -1,0 +1,2 @@
+AllEventsIntent find[ me| all]* places to watch {Sports}[ on {Date}]?
+AllEventsIntent where['re| are| is] the [nearest]? place[s]? to watch {Sports}[ on {Date}]?

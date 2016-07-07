@@ -1,0 +1,32 @@
+AllEventsIntent find places to watch {Sports}
+AllEventsIntent find places to watch {Sports} on {Date}
+AllEventsIntent find me places to watch {Sports}
+AllEventsIntent find me places to watch {Sports} on {Date}
+AllEventsIntent find all places to watch {Sports}
+AllEventsIntent find all places to watch {Sports} on {Date}
+AllEventsIntent find me all places to watch {Sports}
+AllEventsIntent find me all places to watch {Sports} on {Date}
+AllEventsIntent where're the place to watch {Sports}
+AllEventsIntent where're the place to watch {Sports} on {Date}
+AllEventsIntent where're the places to watch {Sports}
+AllEventsIntent where're the places to watch {Sports} on {Date}
+AllEventsIntent where're the nearest place to watch {Sports}
+AllEventsIntent where're the nearest place to watch {Sports} on {Date}
+AllEventsIntent where're the nearest places to watch {Sports}
+AllEventsIntent where're the nearest places to watch {Sports} on {Date}
+AllEventsIntent where are the place to watch {Sports}
+AllEventsIntent where are the place to watch {Sports} on {Date}
+AllEventsIntent where are the places to watch {Sports}
+AllEventsIntent where are the places to watch {Sports} on {Date}
+AllEventsIntent where are the nearest place to watch {Sports}
+AllEventsIntent where are the nearest place to watch {Sports} on {Date}
+AllEventsIntent where are the nearest places to watch {Sports}
+AllEventsIntent where are the nearest places to watch {Sports} on {Date}
+AllEventsIntent where is the place to watch {Sports}
+AllEventsIntent where is the place to watch {Sports} on {Date}
+AllEventsIntent where is the places to watch {Sports}
+AllEventsIntent where is the places to watch {Sports} on {Date}
+AllEventsIntent where is the nearest place to watch {Sports}
+AllEventsIntent where is the nearest place to watch {Sports} on {Date}
+AllEventsIntent where is the nearest places to watch {Sports}
+AllEventsIntent where is the nearest places to watch {Sports} on {Date}
