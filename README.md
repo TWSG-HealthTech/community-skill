@@ -18,6 +18,13 @@ docker run -p 3306:3306 --name HealthTechDb -e MYSQL_ROOT_PASSWORD=top-banana! -
 npm run initDb
 ```
 
+### Run Lambda in local (using lambda-local library)
+
+```
+npm run lambda -e test-events/all-events.js
+```
+where test-events/all-events.js define sample event to be sent to Lambda
+
 ### Create deployment package
 
 - Run zip.sh to produce deployment.zip

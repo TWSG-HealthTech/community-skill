@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "flutter": "flutterance alexa/flutterances.txt alexa/utterances.txt",
-    "initDb": "sequelize db:migrate && sequelize db:seed:all"
+    "initDb": "sequelize db:migrate && sequelize db:seed:all",
+    "lambda": "lambda-local -l src/index.js -h handler -e"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   "homepage": "https://github.com/TWSG-HealthTech/community-skill#readme",
   "devDependencies": {
     "flutterance": "0.0.11",
+    "lambda-local": "0.0.10",
     "sequelize-cli": "^2.4.0"
   },
   "dependencies": {
