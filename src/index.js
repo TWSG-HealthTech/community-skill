@@ -3,8 +3,10 @@ var handlers = require("./handlers")
 
 // Route the incoming request based on type (LaunchRequest, IntentRequest,
 // etc.) The JSON body of the request is provided in the event parameter.
-exports.handler = function (event, context) {
+exports.handler = function (event, context, callback) {
     try {
+        context.callbackWaitsForEmptyEventLoop = true; 
+
         console.log("event.session.application.applicationId=" + event.session.application.applicationId);
 
         /**
@@ -24,21 +26,22 @@ exports.handler = function (event, context) {
         if (event.request.type === "LaunchRequest") {
             onLaunch(event.request,
                 event.session,
-                function callback(sessionAttributes, speechletResponse) {
-                    context.succeed(helpers.buildResponse(sessionAttributes, speechletResponse));
+                function (sessionAttributes, speechletResponse) {
+                    callback(helpers.buildResponse(sessionAttributes, speechletResponse));
                 });
         } else if (event.request.type === "IntentRequest") {
             onIntent(event.request,
                 event.session,
-                function callback(sessionAttributes, speechletResponse) {
-                    context.succeed(helpers.buildResponse(sessionAttributes, speechletResponse));
+                function (sessionAttributes, speechletResponse) {
+                    callback(helpers.buildResponse(sessionAttributes, speechletResponse));
                 });
         } else if (event.request.type === "SessionEndedRequest") {
             onSessionEnded(event.request, event.session);
-            context.succeed();
+            callback();
         }
     } catch (e) {
-        context.fail("Exception: " + e);
+        console.log("exception while processing", e);
+        callback(e);
     }
 };
 

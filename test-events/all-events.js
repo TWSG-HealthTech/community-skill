@@ -25,9 +25,9 @@ module.exports = {
                     "name": "Date",
                     "value": "2016-07-07"
                 },
-                "Sports": {
+                "Activity": {
                     "name": "Sports",
-                    "value": "foodball"
+                    "value": "Football"
                 }
             }
         },

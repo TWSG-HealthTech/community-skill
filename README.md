@@ -21,7 +21,7 @@ npm run initDb
 ### Run Lambda in local (using lambda-local library)
 
 ```
-npm run lambda -e test-events/all-events.js
+npm run lambda test-events/all-events.js
 ```
 where test-events/all-events.js define sample event to be sent to Lambda
 
