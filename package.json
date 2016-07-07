@@ -16,6 +16,9 @@
     "url": "https://github.com/TWSG-HealthTech/community-skill/issues"
   },
   "homepage": "https://github.com/TWSG-HealthTech/community-skill#readme",
-  "devDependencies": {
+  "devDependencies": {},
+  "dependencies": {
+    "mysql": "^2.11.1",
+    "sequelize": "^3.23.4"
   }
 }
