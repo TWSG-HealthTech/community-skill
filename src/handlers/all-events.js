@@ -29,11 +29,44 @@ function setDateQuery(query, date) {
     }
 }
 
+function formatDay(activity) {
+    var days = [];
+    if(activity.onMonday == true) {
+        days.push("Monday");
+    }
+
+    if(activity.onTuesday == true) {
+        days.push("Tuesday");
+    }
+
+    if(activity.onWednesday == true) {
+        days.push("Wednesday");
+    }
+
+    if(activity.onThursday == true) {
+        days.push("Thursday");
+    }
+
+    if(activity.onFriday == true) {
+        days.push("Friday");
+    }
+
+    if(activity.onSaturday == true) {
+        days.push("Saturday");
+    }
+
+    if(activity.onSunday == true) {
+        days.push("Sunday");
+    }
+
+    return days.join(", ");
+}
+
 exports.handle = function(intent, session, callback) {
     var repromptText = null;
     var sessionAttributes = {};
     var shouldEndSession = true;
-    var speechOutput = "This is a placeholder";
+    var speechOutput = [];
 
     var activity = intent.slots.Activity.value;
     var date = moment(intent.slots.Date.value, "YYYY-MM-DD");
@@ -47,9 +80,10 @@ exports.handle = function(intent, session, callback) {
     db.Activity.findAll({
         where: query
     }).then((activities) => {
-        console.log("find result", _.map(activities, a => a.dataValues));
+        speechOutput.push(`there are ${activities.length} activities`);
+        _.forEach(activities, a => speechOutput.push(`${a.activity} at ${a.location} every ${formatDay(a)}, starts at ${a.timeStart}, ends at ${a.timeEnd}`))
 
         callback(sessionAttributes,
-            helpers.buildSpeechletResponse(intent.name, speechOutput, repromptText, shouldEndSession));
+            helpers.buildSpeechletResponse(intent.name, speechOutput.join(". "), repromptText, shouldEndSession));
     });
 }
